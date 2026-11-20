@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body { @apply bg-paper text-ink font-sans antialiased; }
+:focus-visible { outline: 2px solid #2563C9; outline-offset: 3px; border-radius: 4px; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.hero-in { animation: rise .7s ease-out both; }
+.hero-in-2 { animation: rise .7s .15s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-in, .hero-in-2 { animation: none; }
+}
